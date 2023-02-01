@@ -19,6 +19,7 @@ $height: 46px; //переменная
 .select{
     width: 100%;
     position: relative;
+    z-index: 100;
 
 
     &.open{    //Если есть в класе open то dropdown показывается
@@ -28,6 +29,10 @@ $height: 46px; //переменная
 
         .select__input{
             border-bottom: none;
+        }
+
+        .select__backdrop{
+            display: block;
         }
     }
 
@@ -66,9 +71,25 @@ $height: 46px; //переменная
         list-style: none;
     }
 
+    //Настройки фона откр. при нажатии на select
+    &__backdrop{
+        position: fixed;
+        display:none;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: transparent;
+    }
+
     &__item{
         padding: 1rem;
         border-bottom: 1px solid #ccc;
+
+        &.selected{
+            background-color: bisque;
+        }
 
         &:hover {
             background-color: #eee;

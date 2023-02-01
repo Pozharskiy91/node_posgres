@@ -1,3 +1,8 @@
+https://www.youtube.com/watch?v=35va4OY7Y1c&t=44s
+https://www.youtube.com/watch?v=ivDjWYcKDZI&t=1202s
+
+
 express
 node
 postgres
+npm install --save-dev parcel
